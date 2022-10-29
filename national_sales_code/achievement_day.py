@@ -1,4 +1,4 @@
-# 自动化播报月份全国报表单日
+
 from openpyxl.styles import colors, Font, Fill, NamedStyle
 from openpyxl.styles import PatternFill, Border, Side, Alignment
 from openpyxl import load_workbook
@@ -38,9 +38,9 @@ def time_t(x):
 print('开始时间{}'.format(time.strftime("%Y-%m-%d-%H:%M:%S", time.localtime())))
 # 连接mongdb
 conn = pymongo.MongoClient('mongodb://{}:{}@{}:{}/?authSource={}'
-                           .format("cda_epmall", "3PUkMsWCTu424Renrffb",
-                                   "dds-wz99d33fe2f72610a042-pub.mongodb.rds.aliyuncs.com",
-                                   "3717", "epmall"))
+                           .format("cda_", "kMsWCTu424Renrffb",
+                                   "dds-wz99d332f72610a042-pub.mongodb.rds.aliyuncs.com",
+                                   "8888", "epmall"))
 conn_epmall = conn["epmall"]
 
 df_order_all = conn_epmall['epmall_orders_100063']  # 全量订单表
