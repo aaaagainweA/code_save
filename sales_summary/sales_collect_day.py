@@ -268,7 +268,7 @@ def wx_image(image):
     result = requests.post(url, headers=headers, json=data)
     return result
 
-wx_image(f'医普茂当日销售汇总表{date}.png')  # 传入图片路径
+wx_image(f'当日销售汇总表{date}.png')  # 传入图片路径
 
 def upload_file(file_path, wx_upload_url):
     file_name = file_path.split("/")[-1]
@@ -301,7 +301,7 @@ def qi_ye_wei_xin_file(wx_url, media_id):
         url=wx_url,
         headers=headers, json=data)
 
-test_report = f'医普茂当日销售汇总表{date}.xlsx'
+test_report = f'当日销售汇总表{date}.xlsx'
 
 wx_api_key = 'b3ab38ac-adbc-489d-adc1-dadd61c2f98c'
 wx_upload_url = "https://qyapi.weixin.qq.com/cgi-bin/webhook/upload_media?key={}&type=file".format(wx_api_key)
@@ -309,5 +309,5 @@ wx_url = 'https://qyapi.weixin.qq.com/cgi-bin/webhook/send?key={}'.format(wx_api
 media_id = upload_file(test_report, wx_upload_url)
 qi_ye_wei_xin_file(wx_url, media_id)
 
-os.remove(f'医普茂当日销售汇总表{date}.png')
-os.remove(f'医普茂当日销售汇总表{date}.xlsx')
+os.remove(f'当日销售汇总表{date}.png')
+os.remove(f'当日销售汇总表{date}.xlsx')
