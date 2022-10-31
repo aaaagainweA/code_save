@@ -155,7 +155,7 @@ for col in  ws1.iter_cols(min_row=2, max_row=ws1.max_row, min_col=1, max_col=ws1
 s1='A1:I'+str(ws1.max_row)
 set_border(ws1, s1) 
 
-wb1.save(filename = f"医普茂{date1}成本表-地区.xlsx")
+wb1.save(filename = f"{date1}成本表-地区.xlsx")
 
 def upload_file(file_path, wx_upload_url):
     file_name = file_path.split("/")[-1]
@@ -188,8 +188,8 @@ def qi_ye_wei_xin_file(wx_url, media_id):
         url=wx_url,
         headers=headers, json=data)
 
-test_report = f"医普茂{date1}成本表-消费.xlsx"
-test_report1=f"医普茂{date1}成本表-地区.xlsx"
+test_report = f"{date1}成本表-消费.xlsx"
+test_report1=f"{date1}成本表-地区.xlsx"
 
 wx_api_key = 'cd68ed22-725e-4b4e-b858-4d5813c554c9'
 wx_upload_url = "https://qyapi.weixin.qq.com/cgi-bin/webhook/upload_media?key={}&type=file".format(wx_api_key)
@@ -200,6 +200,6 @@ qi_ye_wei_xin_file(wx_url, media_id)
 media_id1 = upload_file(test_report1, wx_upload_url)
 qi_ye_wei_xin_file(wx_url, media_id1)
 
-os.remove(f"医普茂{date1}成本表-消费.xlsx")
-os.remove(f"医普茂{date1}成本表-地区.xlsx")
+os.remove(f"{date1}成本表-消费.xlsx")
+os.remove(f"{date1}成本表-地区.xlsx")
 
