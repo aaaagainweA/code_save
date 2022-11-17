@@ -2,7 +2,7 @@
 # -*- coding: utf-8 -*-
 
 #import sys
-#sys.path.append('D:\\wangxingwei\\模型\\lsmodel\\lsmodel')
+#sys.path.append('D:\\模型\\lsmodel\\lsmodel')
 #import utils
 #from sklearn.ensemble import GradientBoostingClassifier
 from sklearn.metrics import confusion_matrix
