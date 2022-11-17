@@ -1,10 +1,5 @@
 
 # -*- coding: utf-8 -*-
-"""
-Created on Wed Jun 27 16:04:14 2018
-
-@author: Administrator
-"""
 
 #import sys
 #sys.path.append('D:\\wangxingwei\\模型\\lsmodel\\lsmodel')
